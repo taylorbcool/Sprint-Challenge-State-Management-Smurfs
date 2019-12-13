@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import { handleName, handleAge, handleHeight, handleSubmit } from '../actions/smurfActions';
+import { handleName, handleAge, handleHeight, handleSubmit, getSmurfs } from '../actions/smurfActions';
 
 const SmurfForm = props => {
     console.log(props)
@@ -60,5 +60,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { handleName, handleAge, handleHeight, handleSubmit }
+    { handleName, handleAge, handleHeight, handleSubmit, getSmurfs }
 )(SmurfForm)
