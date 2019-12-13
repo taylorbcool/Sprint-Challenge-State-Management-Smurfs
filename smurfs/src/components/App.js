@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from 'react-redux';
 import SmurfList from './SmurfList'
+import SmurfForm from './SmurfForm'
 import { getSmurfs } from '../actions/smurfActions'
 import "./App.css";
 
@@ -15,6 +16,7 @@ const App = props => {
     <div className="App">
       <h1>SMURFS! 2.0 W/ Redux</h1>
       <SmurfList />
+      <SmurfForm />
     </div>
   );
 }
