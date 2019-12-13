@@ -40,12 +40,13 @@ export const getSmurfs = () => dispatch => {
 export const handleSubmit = data => dispatch => {
     dispatch({ type: POST_DATA_START})
     const newSmurf = {...data, id: Date.now()}
+    console.log(JSON.stringify(newSmurf));
 
     axios
         .post(`http://localhost:3333/smurfs`, newSmurf)
         .then(res => {
             console.log(res)
-            dispatch({ type: POST_DATA_SUCCESS, payload: res.data })
+            dispatch({ type: POST_DATA_SUCCESS, payload: res.data }, getSmurfs())
         })
         .catch(err => {
             dispatch({ type: POST_DATA_FAILURE, payload: err })

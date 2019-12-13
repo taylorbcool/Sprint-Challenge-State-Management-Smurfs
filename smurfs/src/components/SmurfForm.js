@@ -53,7 +53,8 @@ const SmurfForm = props => {
 
 const mapStateToProps = state => {
     return {
-        inputValues: state.inputValues
+        inputValues: state.inputValues,
+        isPosting: state.isPosting
     }
 }
 
